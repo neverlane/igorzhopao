@@ -22,7 +22,9 @@ bot.on("inline_query", async (context) => {
         message_text: randomPhrase,
       },
     },
-  ]);
+  ], 
+  {cache_time: 0}
+  );
 });
 
 bot.start()
