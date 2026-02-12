@@ -1,7 +1,7 @@
 import { Bot } from "gramio";
 import "dotenv/config";
 
-const jopaaPhrases = [
+const phrases = [
   "ЖОПА",
   "жопо?",
   "жопи-жопи",
@@ -11,7 +11,7 @@ const jopaaPhrases = [
 const bot = new Bot(process.env.BOT_TOKEN);
 
 bot.on("inline_query", async (context) => {
-  const randomPhrase = phrases[Math.floor(Math.random() * jopaaPhrases.length)];
+  const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
 
   await context.answerInlineQuery([
     {
