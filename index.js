@@ -19,7 +19,7 @@ bot.on("inline_query", async (context) => {
       id: "1",
       title: "жопа",
       input_message_content: {
-        message_text: randomPhrase,
+        message_text: Array(1 + Math.random() * 10 | 0).fill(randomPhrase).join("\n"),
       },
     },
   ], 
